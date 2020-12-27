@@ -9,8 +9,7 @@ import UIKit
 import Firebase
 
 class ViewController: UIViewController {
-
-    
+ 
     
     @IBAction func signOutButtonPressed(_ sender: Any) {
         signOut()
@@ -19,6 +18,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let user = Auth.auth().currentUser?.displayName
+        
+        title = user
     }
 
     func signOut() {
